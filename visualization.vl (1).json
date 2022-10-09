@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "The global game sales in millions by platforms over the years",
+  "width": 1000,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/markiessuah/FIT3179/main/video_game_sale.csv"
+  },
+  "params": [
+    {
+      "name": "year",
+      "value": 2008,
+      "bind": {
+        "input": "range",
+        "min": 1990,
+        "max": 2016,
+        "step": 1,
+        "name": "Select the year:"
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Year == year"}],
+  "encoding": {
+    "x": {"field": "PlatformC", "type": "nominal", "title": "Platform"},
+    "y": {
+      "aggregate": "sum",
+      "field": "Global_Sales",
+      "type": "quantitative",
+      "title": "Total Global Sales in millions"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 3,
+        "cornerRadiusTopRight": 3
+      },
+      "encoding": {
+        "color": {"field": "Publisher", "scale": {"scheme": "tableau20"}},
+        "tooltip": [
+          {"field": "Name", "type": "nominal", "title": "Game Name"},
+          {"field": "Genre", "type": "nominal"},
+          {"field": "Year", "type": "nominal", "title": "Year Released"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": -10,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Platform", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "config": {}
+}
