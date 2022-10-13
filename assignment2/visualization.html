@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+  <script src="js/v1.js"></script>
+  <script src="js/v2.js"></script>
+  <script src="js/v3.js"></script>
+  <script src="js/v4.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1 style="margin-top: 10px;">The<span class="darkcol"> Growth </span>of the<span class="darkcol"> Video Game </span>Industry</h1>
+    <div class="bgdarkcol">
+    <p>Throughout the last few decades, the rise of technology evolution has tranformed gaming from simple arcade games in the 90's to complex AAA games in our modern world.<br>
+    To better capture this, this visualisation aims to explore the impact of the video game industry as can be seen from the games sales, consoles released as well as the need to
+  keep up with the era of technological enhancements.</p></div>
+  </div>
+  <h2 style="color: #0a7a91;text-align: center;">Video Game Revenue ($) per 10,000 People from 2019 to 2022</h2>
+  <div id="vis2" style="padding-bottom: 20px;"></div>
+  <div class="bgnormcol" style="height: 180px; padding-top: 10px;"><div class="bgdarkcol" style="font-size: 30px; font-weight: bold; height: 50px;padding-top: 10px;">The Top 10 highest revenue generated has been dotted for reference</div><br><p>The choropleth map above highlights the vast video game revenue generated in a certain country from the year 2019 to 2022<br>The slider can be used to navigate through the years where it is obvious that the overall color of the map darkens through the year which indicates the increment in video game revenue</p></div>
+  <div id="container">
+    <div id="leftThing">
+      <h2 style="color: #0a7a91; text-align: center;">The sales of consoles since their releases by company</h2>
+      <div id="vis3"></div>
+    </div>
+    <div id="rightThing">
+      <h2 style="color: #0a7a91;text-align: center;">The average ratings of games by genre</h2>
+      <div id="vis4"></div>
+    </div>
+  
+  </div>
+  <div class="bgnormcol" style="height: 180px; padding-top: 10px;"><div class="bgdarkcol" style="font-size: 30px; font-weight: bold; height: 50px;padding-top: 10px;">The pie chart shows the dominance of the big 3 company, Sony, Nintendo and Microsoft</div><br>
+  <p>The constant release of game consoles throughout, shows in the pie chart that the big companies will continue to thrive as they are still releasing consoles which only increases their yearly console sales.<br>
+    The bar chart seems to prove that all video game genre are popular and could get a overall high average rating.</p></div>
+    <h2 style="color: #0a7a91; text-align: center;">The global sales ($millions) of video games throughout the year released on major game companies </h2>
+    <div id="vis1" style="padding-bottom: 20px;"></div>
+    <div class="bgnormcol" style="height: 240px; padding-top: 10px;">
+      <div class="bgdarkcol" style="font-size: 30px; font-weight: bold; height: 80px;padding-top: 10px;">The area chart builds on the previous point that the big 3 companies builds on their success and increase their game sales year after year</div><br>
+    <p>The line chart belows it can be used to filter the data onto a specific year, as well as a selection tool for each major game company in the past decades.
+      <br>It can be seen that older generation companies like Sega and Atari had a good run in the early 90's but falls short over time due to not releasing more consoles for more new game support.</p></div>
+</body>
+</html>
