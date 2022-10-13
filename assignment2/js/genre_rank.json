@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/markiessuah/FIT3179/main/datasets/game_sale_rating.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "genre",
+      "type": "nominal",
+      "axis": null,
+      "sort": {"op": "average", "field": "critic_score"}
+    },
+    "size": {"value": 30}
+  },
+  "transform": [{"filter": "datum.critic_score > 90"}],
+  "layer": [
+    {
+      "mark": {"type": "bar"},
+      "encoding": {
+        "x": {
+          "aggregate": "average",
+          "field": "critic_score",
+          "scale": {"domain": [0, 100]},
+          "title": "Average ratings of popular video games genre",
+          "axis": {"titleFontSize": 15}
+        },
+        "color": {
+          "field": "genre",
+          "scale": {"scheme": "oranges"},
+          "title": "Game Genre",
+          "sort": {"op": "average", "field": "critic_score"}
+        },
+        "tooltip": [
+          {
+            "field": "average_critic_score",
+            "type": "quantitative",
+            "title": "Average Rating",
+            "format": ",.2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "x": 5},
+      "encoding": {
+        "text": {"field": "genre"},
+        "detail": {"aggregate": "count"},
+        "size": {"value": 15}
+      }
+    }
+  ],
+  "config": {}
+}
