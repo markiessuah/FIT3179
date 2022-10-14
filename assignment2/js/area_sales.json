@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/markiessuah/FIT3179/main/datasets/game_sale_rating.csv"
+  },
+  "background": "#d3e7eb",
+  "params": [
+    {
+      "name": "Platform_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Atari",
+          "Microsoft",
+          "Nintendo",
+          "PC",
+          "PlayStation",
+          "Sega"
+        ],
+        "labels": [
+          "Show All",
+          "Atari",
+          "Microsoft",
+          "Nintendo",
+          "PC",
+          "PlayStation",
+          "Sega"
+        ],
+        "name": "Platform Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Platform_selection == null || datum.platformC == Platform_selection"
+    }
+  ],
+  "vconcat": [
+    {
+      "width": 1300,
+      "height": 500,
+      "layer": [
+        {
+          "mark": {"type": "area"},
+          "encoding": {
+            "x": {
+              "field": "year",
+              "type": "temporal",
+              "scale": {"domain": {"param": "year"}},
+              "axis": {"title": ""}
+            },
+            "y": {
+              "aggregate": "sum",
+              "field": "global_sales",
+              "type": "quantitative",
+              "title": "Total global sales"
+            },
+            "tooltip": [
+              {
+                "aggregate": "sum",
+                "field": "global_sales",
+                "type": "quantitative",
+                "title": "Company Sales ($M)",
+                "format": ",.2f"
+              },
+              {"field": "platformC", "title": "Platform"}
+            ],
+            "color": {
+              "field": "platformC",
+              "title": "Platforms",
+              "scale": {
+                "range": [
+                  "#Fb7600",
+                  "#63da75",
+                  "#De0c0c",
+                  "#F7f267",
+                  "#1036d2",
+                  "#Bdbdbd"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "baseline": "middle",
+            "fontSize": 11.5,
+            "dy": -1,
+            "fontStyle": "italic"
+          },
+          "encoding": {
+            "text": {
+              "aggregate": "sum",
+              "field": "global_sales",
+              "type": "quantitative"
+            },
+            "color": {"value": "black"},
+            "opacity": {
+              "condition": {
+                "test": "datum['year'] == 347155200000 || datum['year'] == 694224000000 || datum['year'] == 473385600000 || datum['year'] == 599616000000 || datum['year'] == 883612800000 || datum['year'] == 1009843200000 || datum['year'] == 1199145600000 || datum['year'] == 1356998400000 ",
+                "value": 1
+              },
+              "value": 0
+            },
+            "x": {
+              "field": "year",
+              "type": "temporal",
+              "scale": {"domain": {"param": "year"}},
+              "axis": {"title": ""}
+            },
+            "y": {
+              "aggregate": "sum",
+              "field": "global_sales",
+              "type": "quantitative",
+              "title": "Total global sales"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 1300,
+      "height": 60,
+      "title": "Use this line chart to filter out the data based on time",
+      "mark": {"type": "line", "color": "orangered"},
+      "params": [
+        {"name": "year", "select": {"type": "interval", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {"field": "year", "type": "temporal", "title": "Year"},
+        "y": {
+          "aggregate": "sum",
+          "field": "global_sales",
+          "type": "quantitative",
+          "scale": {"domain": [0, 700]},
+          "axis": {"tickCount": 3, "grid": false, "title": ""}
+        }
+      }
+    }
+  ],
+  "config": {}
+}
