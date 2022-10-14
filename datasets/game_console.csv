@@ -1,0 +1,52 @@
+﻿platform,type,company,year,sold,companyother
+Atari 2600,Home,Atari,1977,30,Atari
+Atari Lynx,Handheld,Atari,1989,1,Atari
+Atari 5200,Home,Atari,1982,1,Atari
+Atari 7800,Home,Atari,1986,1,Atari
+WonderSwan,Handheld,Bandai,1999,3.5,Others
+ColecoVision,Home,Coleco,1982,2,Others
+Telstar,Dedicated,Coleco,1976,1,Others
+Magnavox Odyssey,Home,Magnavox/Philips,1978,2,Others
+Intellivision,Home,Mattel,1980,3,Others
+Dendy,Home,Micro Genius,1992,6,Others
+Xbox 360,Home,Microsoft,2005,84,Microsoft
+Xbox One,Home,Microsoft,2013,58.5,Microsoft
+Xbox,Home,Microsoft,2001,24,Microsoft
+Xbox Series X/S,Home,Microsoft,2020,12,Microsoft
+PC Engine CD-ROM,Home console add-on,NEC,1988,1.92,Others
+PC Engine/TurboGrafx-16,Home,NEC/Hudson Soft,1987,10,Others
+Nintendo DS,Handheld,Nintendo,2004,154.02,Nintendo
+Game Boy,Handheld,Nintendo,1989,118.69,Nintendo
+Nintendo Switch,Hybrid,Nintendo,2017,111.08,Nintendo
+Wii,Home,Nintendo,2006,101.63,Nintendo
+Game Boy Advance,Handheld,Nintendo,2001,81.51,Nintendo
+Nintendo 3DS,Handheld,Nintendo,2011,75.94,Nintendo
+NES/Famicom,Home,Nintendo,1983,61.91,Nintendo
+SNES/Super Famicom,Home,Nintendo,1990,49.1,Nintendo
+Game & Watch,Handheld,Nintendo,1980,43.4,Nintendo
+Nintendo 64,Home,Nintendo,1996,32.93,Nintendo
+GameCube,Home,Nintendo,2001,21.74,Nintendo
+Wii U,Home,Nintendo,2012,13.56,Nintendo
+Super NES Classic Edition,Dedicated,Nintendo,2017,5.28,Nintendo
+Famicom Disk System,Home console add-on,Nintendo,1986,4.5,Nintendo
+NES Classic Edition,Dedicated,Nintendo,2016,3.56,Nintendo
+Color TV-Game,Dedicated,Nintendo,1977,3,Nintendo
+N-Gage,Handheld,Nokia,2003,3,Others
+Philips CD-i,Home,Philips,1990,1,Others
+Sega Genesis/Mega Drive,Home,Sega,1988,30.75,Sega
+Sega Game Gear,Handheld,Sega,1990,10.62,Sega
+Sega Master System,Home,Sega,1986,11.96,Sega
+Sega Saturn,Home,Sega,1994,9.26,Sega
+Dreamcast,Home,Sega,1998,9.13,Sega
+Sega Pico,Home,Sega,1993,3.4,Sega
+Sega CD,Home console add-on,Sega,1991,2.24,Sega
+PlayStation 2,Home,Sony,2000,155,Sony
+PlayStation 4,Home,Sony,2013,117.2,Sony
+PlayStation,Home,Sony,1994,102.49,Sony
+PlayStation 3,Home,Sony,2006,87.4,Sony
+PlayStation Portable,Handheld,Sony,2004,80.66,Sony
+PlayStation 5,Home,Sony,2020,21.7,Sony
+PlayStation Vita,Handheld,Sony,2011,13.34,Sony
+Master System (Brazilian variants),Home,Tectoy,1989,8,Others
+Mega Drive (Brazilian variants),Home,Tectoy,1990,3,Others
+Steam Deck,Handheld,Valve,2022,1.45,Others
