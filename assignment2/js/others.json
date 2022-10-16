@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "background": "#d3e7eb",
+  "data": {
+    "url": "https://raw.githubusercontent.com/markiessuah/FIT3179/main/datasets/game_console_other.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusBottomRight": 5,
+        "cornerRadiusTopRight": 5,
+        "color": "#f5e024"
+      },
+      "encoding": {
+        "x": {
+          "field": "sold",
+          "type": "quantitative",
+          "axis": {
+            "title": "Consoles sold in millions",
+            "labelFontSize": 18,
+            "titleFontSize": 18
+          }
+        },
+        "y": {
+          "field": "platform",
+          "type": "nominal",
+          "sort": {"field": "sold", "order": "ascending"},
+          "axis": {
+            "title": "Console Name",
+            "labelFontSize": 18,
+            "titleFontSize": 18
+          }
+        },
+        "tooltip": [
+          {
+            "field": "sold",
+            "type": "quantitative",
+            "title": "Company Sales ($M)",
+            "format": ",.2f"
+          },
+          {"field": "platform", "title": "Platform"},
+          {"field": "year", "title": "Year released"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "xOffset": 10,
+        "fontSize": 20,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {"field": "sold", "type": "quantitative", "format": ".2f"},
+        "x": {"field": "sold", "type": "quantitative"},
+        "y": {
+          "field": "platform",
+          "type": "nominal",
+          "sort": {"field": "year", "order": "ascending"}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "xOffset": 61,
+        "fontSize": 20,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {"value": "$M"},
+        "x": {"field": "sold", "type": "quantitative"},
+        "y": {
+          "field": "platform",
+          "type": "nominal",
+          "sort": {"field": "year", "order": "ascending"}
+        },
+        "opacity": {
+          "condition": {"test": "datum['sold'] > 9", "value": 1},
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "xOffset": 51,
+        "fontSize": 20,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {"value": "$M"},
+        "x": {"field": "sold", "type": "quantitative"},
+        "y": {
+          "field": "platform",
+          "type": "nominal",
+          "sort": {"field": "year", "order": "ascending"}
+        },
+        "opacity": {
+          "condition": {"test": "datum['sold'] < 10", "value": 1},
+          "value": 0
+        }
+      }
+    }
+  ],
+  "config": {}
+}
