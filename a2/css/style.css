@@ -1,0 +1,73 @@
+*{
+  font-family: Tahoma;
+  margin:0 auto; 
+}
+
+.header {
+  margin-top: 0px;
+  text-align: center;
+  background-color: #7ab8c5;
+  color: white;
+  font-size: 30px;
+  height: 180px;
+  width: 1500px;
+}
+
+.darkcol{
+  color: #0a7a91;
+}
+
+.bgdarkcol{
+  background-color: #0a7a91;
+  width: 1500px;
+  
+}
+
+.bgnormcol{
+  background-color: #7ab8c5;
+  color: white;
+  text-align: center;
+  
+}
+
+#vis1 {
+  display: block;
+  margin:0 auto; 
+  padding-left: 50px;
+  width: 1500px;
+}
+
+#vis2{
+    margin:0 auto;
+    padding: 0 auto;
+    width: 1500px;
+}
+
+
+body{
+  margin:0 auto; 
+  width: 1500px;
+}
+
+p{
+  font-size: 20px;
+}
+
+.container {
+  height: 420px;
+  width: 100%;
+  display: flex;
+  margin:0 auto; 
+  background-color: #effcff;
+}
+.leftThing {
+  width: 50%;
+  margin:0 auto; 
+  padding-left: 3%;
+  padding: 0 auto;
+}
+.rightThing {
+  width: 50%;
+  margin:0 auto; 
+  padding: 0 auto;
+}
