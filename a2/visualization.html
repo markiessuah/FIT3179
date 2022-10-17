@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+  <script src="js/v1.js"></script>
+  <script src="js/v2.js"></script>
+  <script src="js/v3.js"></script>
+  <script src="js/v4.js"></script>
+  <script src="js/v5.js"></script>
+  <script src="js/v6.js"></script>
+  <script src="js/v7.js"></script>
+  <script src="js/v8.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1 style="margin-top: 10px;">The<span class="darkcol"> Growth </span>of the<span class="darkcol"> Video Game </span>Industry</h1>
+    <div class="bgdarkcol">
+    <p>Throughout the last few decades, the rise of technology evolution has tranformed gaming from simple arcade games in the 90's to complex AAA games in our modern world.<br>
+    To better capture this, this visualisation aims to explore the impact of the video game industry as can be seen from the games sales, consoles released as well as the need to
+  keep up with the era of technological enhancements.</p></div>
+  </div>
+  <h2 style="padding-top:5px;color: #0a7a91;text-align: center; background-color: #effcff;font-size: 20px;">Video Game Revenue ($) per 10,000 People from 2019 to 2022</h2>
+  <div id="vis2" style="padding-bottom: 10px; background-color: #effcff;"></div>
+  <div class="bgnormcol" style="height: 90px; padding-top: 10px;"><div class="bgdarkcol" style="font-size: 20px; font-weight: bold; height:27px;">The top 10 highest revenue country is shown on the map</div><br><div style="margin-top: -15px;"><p>The vast video game revenue generated in a certain country from the year 2019 to 2022.<br>The overall color of the map darkens through the year which indicates the increment in video game revenue.</p></div></div>
+  <h2 style="color: #0a7a91; text-align: center;background-color: #effcff;font-size: 20px;padding-top:5px;">The global sales ($millions) of game consoles throughout the year released by major game companies </h2>
+  <div class="container" style="margin-top: 15px">
+    <div class="leftThing">
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Total Sales: <span style="color: #e45756;">881.85$M</span></h2>
+      <h2 style="color: #0a7a91; text-align: center; width: 750px;font-size: 20px;">Nintendo</h2>
+      <div id="vis5"></div>
+    </div>
+    <div class="rightThing">
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Total Sales: <span style="color: #f5e024;">45.87$M</span></h2>
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Others</h2>
+      <div id="vis6"></div>
+    </div>
+    </div>
+    <div class="container">
+    <div class="leftThing">
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Total Sales: <span style="color: #005abb;">577.79$M</span></h2>
+      <h2 style="color: #0a7a91;text-align: center; width: 750px;font-size: 20px;">PlayStation</h2>
+      <div id="vis7" style="padding-left: 20px;"></div>
+    </div>
+    <div class="rightThing">
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Total Sales: <span style="color: #79706e;">77.36$M</span></h2>
+      <h2 style="color: #0a7a91;text-align: center;font-size: 20px;">Sega</h2>
+      <div id="vis8"></div>
+    </div>
+    </div>
+    <div class="container">
+    <div class="leftThing">
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Total Sales: <span style="color: #54a24b;">178.50$M</span></h2>
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Microsoft</h2>
+      <div id="vis4"style="padding-left: 52px;"></div>
+    </div>
+    <div class="rightThing">
+      <h2 style="color: #0a7a91; text-align: center;font-size: 20px;">Total Sales: <span style="color: #f58518;">33.00$M</span></h2>
+      <h2 style="color: #0a7a91;text-align: center;font-size: 20px;">Atari</h2>
+      <div id="vis3" style="padding-left: 110px;"></div>
+    </div>
+  </div>
+  <div class="bgnormcol" style="height: 90px; padding-top: 10px;"><div class="bgdarkcol" style="font-size: 20px; font-weight: bold; height: 27px;padding-top: 0px;">The video game market continues to be dominated by the big 3 companies, Nintendo, Sony and Microsoft.</div>
+  <div style="margin-top: 5px;"><p>The consoles released throughout the years by the major companies.<br>As the year goes on, only the 3 big companies kept up with the time and continue releasing consoles by the video game generations.</p></div></div>
+    <h2 style="color: #0a7a91; text-align: center;background-color: #effcff;font-size: 20px;padding-top:5px;">The global sales ($millions) of video games throughout the year released on major game companies </h2>
+    <div id="vis1" style="padding-bottom: 20px;background-color: #effcff;"></div>
+    <div class="bgnormcol" style="height: 90px; padding-top: 10px;">
+      <div class="bgdarkcol" style="font-size: 20px; font-weight: bold; height: 27px;padding-top: 0px;">Nintendo has maintained consistency by contributing to the global sales for the longest period (1982 - 2017).</div><br>
+      <div style="margin-top: -15px;"><p>Some companies start strong and eventually dies off before the 00's while some companies started later and kept the sales going.
+      <br>Selecting the company can show the exact trend of the years in which a company peak as well as their lowest points.</p></div></div>
+</body>
+</html>
